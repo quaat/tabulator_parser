@@ -7,6 +7,7 @@ name = "tabulator-parser"
 version = "0.1.0"
 description = "Parser and renderer for text-based guitar tablature"
 readme = "README.md"
+license = { text = "MIT" }
 requires-python = ">=3.12"
 dependencies = [
     "black>=26.1.0",
