@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tabulator-parser"
+version = "0.1.0"
+description = "Parser and renderer for text-based guitar tablature"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "black>=26.1.0",
+    "mido>=1.3.3",
+    "ruff>=0.15.1",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.3",
+    "pytest-cov>=5.0",
+]
+
+[tool.setuptools]
+packages = ["tabulator_parser"]
+
+[tool.setuptools.package-dir]
+tabulator_parser = "src"
+
+[tool.pytest.ini_options]
+testpaths = ["test"]
+addopts = "--cov=tabulator_parser --cov-report=term-missing --cov-fail-under=98"
